@@ -107,4 +107,4 @@ ssl/
 *.dump
 
 # Development tools
-.pre-commit-config.yaml.bak
+.pre-commit-config.yaml.bak.claude/
