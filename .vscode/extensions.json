@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.black-formatter",
+    "ms-python.isort",
+    "ms-python.flake8",
+    "ms-python.mypy-type-checker",
+    "svelte.svelte-vscode",
+    "bradlc.vscode-tailwindcss",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "ms-vscode.vscode-typescript-next",
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-json"
+  ]
+}

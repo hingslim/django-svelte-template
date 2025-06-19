@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Celebration Animations */
+@keyframes checkmark-draw {
+  0% {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 20;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dasharray: 20;
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) translateX(var(--particle-x, 0px)) rotate(720deg) scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes emoji-bounce {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.3) translateY(-4px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Enhanced bounce animation */
+@keyframes bounce {
+  0% {
+    transform: scale(0.3) translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(0.95) translateY(2px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Pulse animation for rings */
+@keyframes ping {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  75%, 100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}

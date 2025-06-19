@@ -1,0 +1,22 @@
+# Build outputs
+.svelte-kit/
+build/
+dist/
+
+# Dependencies
+node_modules/
+
+# Generated files
+package-lock.json
+*.min.js
+*.min.css
+
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+
+# Coverage
+coverage/

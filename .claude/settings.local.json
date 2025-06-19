@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run setup:python:*)",
+      "Bash(python3 manage.py migrate:*)",
+      "Bash(rm -rf backend/backend)",
+      "Bash(source:*)",
+      "Bash(echo:*)",
+      "Bash(python3 manage.py check:*)",
+      "Bash(python3:*)",
+      "Bash(find:*)",
+      "Bash(rg:*)"
+    ],
+    "deny": []
+  }
+}
