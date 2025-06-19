@@ -1,0 +1,60 @@
+{
+  "name": "django-svelte-template",
+  "version": "1.0.0",
+  "description": "A modern full-stack template combining Django REST Framework with SvelteKit, featuring authentication, CRUD operations, and dark mode support",
+  "homepage": "https://github.com/hingslim/django-svelte-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hingslim/django-svelte-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hingslim/django-svelte-template/issues"
+  },
+  "scripts": {
+    "install": "cd frontend && rm -f package-lock.json && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "source django_svelte_env/bin/activate && cd backend && python3 manage.py runserver",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "setup": "npm run install && npm run setup:python",
+    "clean-install": "cd frontend && rm -rf node_modules package-lock.json && npm install",
+    "setup:python": "python3.12 -m venv django_svelte_env && source django_svelte_env/bin/activate && pip install -r requirements.txt",
+    "setup:python-win": "python -m venv django_svelte_env && django_svelte_env\\Scripts\\activate && pip install -r requirements.txt",
+    "migrate": "source django_svelte_env/bin/activate && cd backend && python3 manage.py migrate",
+    "migrate:win": "django_svelte_env\\Scripts\\activate && cd backend && python manage.py migrate",
+    "createsuperuser": "source django_svelte_env/bin/activate && cd backend && python3 manage.py createsuperuser",
+    "createsuperuser:win": "django_svelte_env\\Scripts\\activate && cd backend && python manage.py createsuperuser",
+    "collectstatic": "source django_svelte_env/bin/activate && cd backend && python3 manage.py collectstatic --noinput",
+    "collectstatic:win": "django_svelte_env\\Scripts\\activate && cd backend && python manage.py collectstatic --noinput",
+    "lint": "npm run lint:frontend && npm run lint:backend",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "source django_svelte_env/bin/activate && flake8 backend/",
+    "format": "npm run format:frontend && npm run format:backend",
+    "format:frontend": "cd frontend && npm run format",
+    "format:backend": "source django_svelte_env/bin/activate && black backend/ && isort backend/",
+    "test": "npm run test:backend",
+    "test:backend": "source django_svelte_env/bin/activate && cd backend && python manage.py test",
+    "setup:dev": "npm run setup && source django_svelte_env/bin/activate && pip install -r requirements-dev.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": [
+    "django",
+    "svelte",
+    "sveltekit",
+    "template",
+    "fullstack",
+    "typescript",
+    "tailwindcss",
+    "rest-api",
+    "authentication",
+    "crud"
+  ],
+  "author": "hingslim",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "python": ">=3.10.0"
+  }
+}
