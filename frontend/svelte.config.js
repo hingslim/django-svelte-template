@@ -9,7 +9,10 @@ export default {
       fallback: null,
       precompress: false,
       strict: true
-    })
+    }),
+    alias: {
+      '$lib': './src/lib'
+    }
   },
   preprocess: vitePreprocess()
 };
