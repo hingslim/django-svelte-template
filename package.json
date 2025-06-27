@@ -11,12 +11,12 @@
     "url": "https://github.com/hingslim/django-svelte-template/issues"
   },
   "scripts": {
-    "install": "npm install && cd frontend && rm -f package-lock.json && npm install",
+    "install-deps": "npm install && cd frontend && rm -f package-lock.json && npm install",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "source django_svelte_env/bin/activate && cd backend && python3 manage.py runserver",
     "dev:frontend": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build",
-    "setup": "npm run install && npm run setup:python",
+    "setup": "npm run install-deps && npm run setup:python",
     "clean-install": "cd frontend && rm -rf node_modules package-lock.json && npm install",
     "setup:python": "python3.12 -m venv django_svelte_env && source django_svelte_env/bin/activate && pip install -r requirements.txt",
     "setup:python-win": "python -m venv django_svelte_env && django_svelte_env\\Scripts\\activate && pip install -r requirements.txt",
