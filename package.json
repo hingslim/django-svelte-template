@@ -11,7 +11,7 @@
     "url": "https://github.com/hingslim/django-svelte-template/issues"
   },
   "scripts": {
-    "install": "cd frontend && rm -f package-lock.json && npm install",
+    "install": "npm install && cd frontend && rm -f package-lock.json && npm install",
     "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:backend": "source django_svelte_env/bin/activate && cd backend && python3 manage.py runserver",
     "dev:frontend": "cd frontend && npm run dev",
